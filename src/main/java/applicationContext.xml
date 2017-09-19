@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="helloWorld" class="world.HelloWorld">
+        <property name="name" value="DengFX"/>
+    </bean>
+
+    <bean id="outputHelper" class="dengfx.OutputHelper">
+        <property name="outputGenerator" ref="csvOutputGenerator"/>
+    </bean>
+
+    <bean id="csvOutputGenerator" class="dengfx.CsvOutputGenerator" />
+    <bean id="jsonOutputGenerator" class="dengfx.JsonOutputGenerator" />
+
+</beans>
